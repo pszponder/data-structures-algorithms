@@ -89,10 +89,10 @@ def contains_duplicate3(nums: list[int]) -> bool:
     Approach 3: Using a Set
     """
 
-    num_set = set()
+    hashset: set[int] = set()
     for num in nums:
-        if num in num_set:
+        if num in hashset:
             return True
         else:
-            num_set.add(num)
+            hashset.add(num)
     return False
