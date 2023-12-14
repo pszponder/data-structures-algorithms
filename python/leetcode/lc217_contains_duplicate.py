@@ -33,6 +33,9 @@ Build up a map of the numbers and their counts. If any count is greater than 1, 
 
 Approach 2: Sorting
 Sort the array and then iterate through it. If any two adjacent numbers are the same, return true.
+
+Approach 3: Using a Python Set
+Keep track of whether or not a number has appeared more than once by putting the numbers in a set
 """
 
 
@@ -47,9 +50,10 @@ def contains_duplicate0(nums: list[int]) -> bool:
                 return True
     return False
 
-    # for idx, num in enumerate(nums):
+    # LESS EFFICIENT THAN ABOVE
+    # for idx1, num1 in enumerate(nums):
     #     for idx2, num2 in enumerate(nums):
-    #         if idx != idx2 and num == num2:
+    #         if idx1 != idx2 and num1 == num2:
     #             return True
     # return False
 
@@ -77,4 +81,18 @@ def contains_duplicate2(nums: list[int]) -> bool:
     for idx in range(len(sorted_list) - 1):
         if sorted_list[idx] == sorted_list[idx + 1]:
             return True
+    return False
+
+
+def contains_duplicate3(nums: list[int]) -> bool:
+    """
+    Approach 3: Using a Set
+    """
+
+    num_set = set()
+    for num in nums:
+        if num in num_set:
+            return True
+        else:
+            num_set.add(num)
     return False

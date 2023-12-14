@@ -7,6 +7,7 @@ from leetcode.lc217_contains_duplicate import (
     contains_duplicate0,
     contains_duplicate1,
     contains_duplicate2,
+    contains_duplicate3,
 )
 
 
@@ -36,6 +37,12 @@ class TestContainsDuplicate(unittest.TestCase):
         self.assertTrue(contains_duplicate2(self.list1))
         self.assertFalse(contains_duplicate2(self.list2))
         self.assertTrue(contains_duplicate2(self.list3))
+
+    def test_contains_duplicate3(self):
+        """Test cases for contains_duplicate3 function: Set Approach"""
+        self.assertTrue(contains_duplicate3(self.list1))
+        self.assertFalse(contains_duplicate3(self.list2))
+        self.assertTrue(contains_duplicate3(self.list3))
 
 
 if __name__ == "__main__":
