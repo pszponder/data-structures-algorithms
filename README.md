@@ -1,15 +1,16 @@
 # Data Structures and Algorithm Questions
 
-## Running go tests
+## Running Tests
 
 ```bash
-make test-go
-```
+# Run all Tests
+make test
 
-## Running python tests
-
-```bash
+# Run all Python Tests
 make test-python
+
+# Run all Golang Tests
+make test-go
 ```
 
 ## Resources / References
