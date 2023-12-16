@@ -63,7 +63,7 @@ def contains_duplicate1(nums: list[int]) -> bool:
     Approach 1: Using a Map
     """
 
-    num_counts = {}
+    num_counts: dict[int, int] = {}
     for num in nums:
         if num in num_counts:
             return True
