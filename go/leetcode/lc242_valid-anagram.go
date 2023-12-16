@@ -81,15 +81,18 @@ func IsAnagram2(s, t string) bool {
 	sSlice := []rune(s)
 	tSlice := []rune(t)
 
-	// Sort the slices
-	// pass in an anonymous function to Slice for sorting
-	sort.Slice(sSlice, func(i, j int) bool {
-		return sSlice[i] < sSlice[j]
-	})
+	// Define an anonymous function to sort the slices
+	// NOTE: In Go, slices are passed by reference, so this function will modify the original slices.
+	// The dereferencing operator (*) is not needed when working with slices.
+	sortRunes := func(r []rune) {
+		sort.Slice(r, func(i, j int) bool {
+			return r[i] < r[j]
+		})
+	}
 
-	sort.Slice(tSlice, func(i, j int) bool {
-		return tSlice[i] < tSlice[j]
-	})
+	// Sort the slices
+	sortRunes(sSlice)
+	sortRunes(tSlice)
 
 	// Convert the sorted rune slices back to strings
 	sSorted := string(sSlice)
@@ -97,9 +100,5 @@ func IsAnagram2(s, t string) bool {
 
 	// Compare the sorted strings
 	// If they are the same, then they are anagrams
-	if sSorted == tSorted {
-		return true
-	}
-
-	return false
+	return sSorted == tSorted
 }
