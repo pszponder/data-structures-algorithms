@@ -33,7 +33,10 @@ Sort the strings and compare them. If they are the same, return true.
 
 package leetcode
 
-import "sort"
+import (
+	"sort"
+	"strings"
+)
 
 // Using a Map
 func IsAnagram1(s, t string) bool {
@@ -101,4 +104,18 @@ func IsAnagram2(s, t string) bool {
 	// Compare the sorted strings
 	// If they are the same, then they are anagrams
 	return sSorted == tSorted
+}
+
+// Sorting Strings (using strings package)
+// https://leetcode.com/problems/valid-anagram/solutions/4410240/three-lines-of-code-by-prodonik-java-c-python-go-js-ruby-c/
+// NOTE: This approach is slower than the previous approach because it uses the strings package
+func IsAnagram3(s, t string) bool {
+	// Convert strings to sorted slices of characters
+	ss := strings.Split(s, "")
+	tt := strings.Split(t, "")
+	sort.Strings(ss)
+	sort.Strings(tt)
+
+	// Check if the sorted slices are equal
+	return strings.Join(ss, "") == strings.Join(tt, "")
 }

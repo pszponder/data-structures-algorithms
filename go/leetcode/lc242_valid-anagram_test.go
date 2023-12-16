@@ -45,3 +45,7 @@ func TestIsAnagram1(t *testing.T) {
 func TestIsAnagram2(t *testing.T) {
 	testIsAnagram(t, IsAnagram2)
 }
+
+func TestIsAnagram3(t *testing.T) {
+	testIsAnagram(t, IsAnagram3)
+}
