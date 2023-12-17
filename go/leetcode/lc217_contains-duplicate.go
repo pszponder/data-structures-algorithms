@@ -27,14 +27,45 @@ Constraints:
 ==========
 APPROACHES
 ==========
+
+-----------------------
 APPROACH 0: Brute Force
+-----------------------
 Using a nested loop, compare each number to every other number in the array.
 
+Time Complexity: O(n^2)
+- Nested loop
+
+Space Complexity: O(1)
+- No extra space used
+
+-----------------------
 APPROACH 1: Using a map
+-----------------------
 Build up a map of the numbers and their counts. If any count is greater than 1, return true.
 
+Time Complexity: O(n)
+- Iterate through the array once (up to n)
+- Map lookup is O(1)
+- Map insertion is O(1)
+
+Space Complexity: O(n)
+- Map size is proportional to the number of elements in the array
+- Worst case is all elements are unique, so map size is n
+
+-------------------
 APPROACH 2: Sorting
+-------------------
+
 Sort the array and then iterate through it. If any two adjacent numbers are the same, return true.
+
+Time Complexity: O(n log n)
+- Sorting is O(n log n)
+- Iterating through the array is O(n)
+- O(n log n) + O(n) = O(n log n)
+
+Space Complexity: O(1)
+- No extra space used
 */
 
 package leetcode

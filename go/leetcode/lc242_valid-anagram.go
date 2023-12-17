@@ -24,11 +24,31 @@ s and t consist of lowercase English letters.
 APPROACHES:
 ===========
 
+-----------------------
 Approach 1: Using a Map
+-----------------------
 Build up a map of the numbers and their counts. If any count is greater than 1, return true.
 
+Time Complexity: O(n)
+- Iterate over the string once to build the map
+- Iterate over the string again to compare the values in the map
+- O(n) + O(n) = O(2n) = O(n)
+
+Space Complexity: O(n)
+- The map will contain at most n entries
+
+-------------------
 Approach 2: Sorting
+-------------------
 Sort the strings and compare them. If they are the same, return true.
+
+Time Complexity: O(n log n)
+- Sorting the strings takes O(n log n) time
+- Comparing the strings takes O(n) time
+- O(n log n) + O(n) = O(n log n)
+
+Space Complexity: O(n)
+- The sorted strings will contain at most n characters
 */
 
 package leetcode

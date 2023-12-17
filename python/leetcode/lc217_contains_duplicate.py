@@ -23,19 +23,65 @@ Constraints:
 1 <= nums.length <= 10^5
 -10^9 <= nums[i] <= 10^9
 
+===========
 APPROACHES:
+===========
 
+-----------------------
 Approach 0: Brute Force
+-----------------------
 Using a nested loop, compare each element to every other element in the array.
 
+Time Complexity: O(n^2)
+- The outer loop iterates through the array once
+- The inner loop iterates through the array once for each element in the outer loop
+- O(n) * O(n) = O(n^2)
+
+Space Complexity: O(1)
+- Don't create any new data structures
+
+-----------------------
+Approach 1: Using a Map
+-----------------------
 Approach 1: Using a Map
 Build up a map of the numbers and their counts. If any count is greater than 1, return true.
 
+Time Complexity: O(n)
+- Iterate through the string once to build the map
+- Iterate through the string again to compare the map values
+- O(n) + O(n) = O(2n) = O(n)
+
+Space Complexity: O(n)
+- Create a map to store the characters and their counts
+- The map will be the same size as the input string
+
+-------------------
 Approach 2: Sorting
+-------------------
 Sort the array and then iterate through it. If any two adjacent numbers are the same, return true.
 
-Approach 3: Using a Python Set
+Time Complexity: O(n log n)
+- Sorting takes O(n log n) time
+- Comparing the strings takes O(n) time
+- O(n log n) + O(n) = O(n log n)
+
+Space Complexity: O(n)
+- Create a new array that is the same size as the input array
+- O(n) + O(n) = O(2n) = O(n)
+
+---------------------------
+Approach 3: Using a Hashset
+---------------------------
 Keep track of whether or not a number has appeared more than once by putting the numbers in a set
+
+Time Complexity: O(n)
+- Iterate through the array once to add the numbers to the set
+- Iterate through the array again to check if the numbers are in the set
+- O(n) + O(n) = O(2n) = O(n)
+
+Space Complexity: O(n)
+- Create a set to store the numbers
+- The set will be the same size as the input array
 """
 
 
