@@ -7,10 +7,10 @@
 make test
 
 # Run all Python Tests
-make test-python
+make test/python
 
 # Run all Golang Tests
-make test-go
+make test/go
 ```
 
 ## Resources / References

@@ -1,11 +1,11 @@
 """
-Unit tests for lc242_valid_anagram.py
+Unit tests for lc0242_valid_anagram.py
 """
 
 import unittest
 from typing import Callable
 
-from leetcode.lc242_valid_anagram import is_anagram1, is_anagram2
+from leetcode.lc0242_valid_anagram import is_anagram1, is_anagram2
 
 
 class TestIsAnagram(unittest.TestCase):

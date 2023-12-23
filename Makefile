@@ -1,11 +1,17 @@
-.PHONY: test_python test_go
-
-test-go:
+.PHONY: test/go
+test/go:
 	@echo "Running Go tests..."
 	cd go && go test -v ./...
 
-test-python:
+.PHONY: test/python
+test/python:
 	@echo "Running Python tests..."
 	cd python && python3 -m unittest discover -v
 
-test: test-go test-python
+.PHONY: test
+test: test/go test/python
+
+.PHONY: clean
+clean:
+	@echo "Cleaning caches..."
+	rm -rf ./python/leetcode/__pycache__
