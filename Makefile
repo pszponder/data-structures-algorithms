@@ -15,3 +15,4 @@ test: test/go test/python
 clean:
 	@echo "Cleaning caches..."
 	rm -rf ./python/leetcode/__pycache__
+	rm -rf ./python/leetcode/tests/__pycache__
