@@ -27,7 +27,8 @@ APPROACHES:
 -----------------------
 Approach 1: Using a Map
 -----------------------
-Build up a map of the numbers and their counts. If any count is greater than 1, return true.
+Build up a map of the numbers and their counts.
+Compare the counts and if their values are the same, then we have an anagram.
 
 Time Complexity: O(n)
 - Iterate through the string once to build the map
