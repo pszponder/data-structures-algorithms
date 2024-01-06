@@ -110,6 +110,7 @@ func twoSum2(nums []int, target int) []int {
 	// Sort the copy
 	sort.Ints(sorted)
 
+	// Define pointers
 	lPtr := 0
 	rPtr := len(nums) - 1
 
