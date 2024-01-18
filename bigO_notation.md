@@ -310,3 +310,4 @@ def fibonacci_recursive(n):
 - [Neetcode.io - Big O Notation](https://neetcode.io/courses/lessons/big-o-notation)
 - [freeCodeCamp - Big O Notation - Full Course](https://www.youtube.com/watch?v=Mo4vesaut8g)
 - [Fireship - Big-O Notation in 100 Seconds](https://www.youtube.com/watch?v=g2o22C3CRfU)
+- [Design Gurus - Demystifying Big-O Notation: The Ultimate Guide to Understanding Algorithm Complexity](https://www.designgurus.io/blog/big-o-algorithm-complexity)

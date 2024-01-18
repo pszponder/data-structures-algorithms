@@ -14,5 +14,4 @@ test: test/go test/python
 .PHONY: clean
 clean:
 	@echo "Cleaning caches..."
-	rm -rf ./python/leetcode/__pycache__
-	rm -rf ./python/leetcode/tests/__pycache__
+	find ./python -type d -name '__pycache__' -exec rm -rf {} +
