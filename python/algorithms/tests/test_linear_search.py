@@ -5,7 +5,7 @@ Unit tests for linear_search.py
 import unittest
 from typing import Callable
 
-from data_structures.search.linear_search import linear_search
+from algorithms.search.linear_search import linear_search
 
 
 class TestLinearSearch(unittest.TestCase):

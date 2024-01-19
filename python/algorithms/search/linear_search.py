@@ -9,7 +9,7 @@ Space Complexity: O(1)
 """
 
 
-def linear_search(lst: list[int], target: int):
+def linear_search(lst: list[int], target: int) -> int:
     """Searches input list for target integer
 
     :param lst: a list of integers
